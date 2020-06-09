@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="Python" name="Python">
+      <configuration sdkName="Python 3.7 (glass-backend)" />
+    </facet>
+    <facet type="MicroPython" name="MicroPython">
+      <configuration>
+        <device name="ESP8266" />
+      </configuration>
+    </facet>
+    <facet type="MicroPython" name="MicroPython">
+      <configuration>
+        <device name="ESP8266" />
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/tuple-weather" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/venv" />
+    </content>
+    <orderEntry type="jdk" jdkName="Python 3.8 (esp)" jdkType="Python SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Python 3.7 (glass-backend) interpreter library" level="application" />
+    <orderEntry type="library" name="MicroPython" level="project" />
+  </component>
+</module>
