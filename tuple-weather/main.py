@@ -26,4 +26,6 @@ t.done()
 
 rtc.alarm(rtc.ALARM0, 600000 * 15)  # 15 minutes
 
+print("goodbye")
+
 machine.deepsleep()
