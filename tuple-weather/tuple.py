@@ -1,5 +1,7 @@
 from umqtt.simple import MQTTClient
 import json
+import time
+
 
 class Tuple:
     def __init__(self, broker, room, etype="m.room.message", client="esp-tuple"):
@@ -22,4 +24,5 @@ class Tuple:
         self.client.publish(topic, msg)
 
     def done(self):
+        time.sleep(1)  # Wait for messages to be send
         self.client.disconnect()
