@@ -2,8 +2,11 @@ import machine
 from libs import bme280_float as bme280
 # from libs import si1145
 
+
 class WeatherStation:
-    def __init__(self):
+    def __init__(self, altitude):
+        self.altitude = altitude
+
         self.bme = None
         self.si = None
         self.i2c = machine.I2C(scl=machine.Pin(5), sda=machine.Pin(4))
@@ -21,7 +24,11 @@ class WeatherStation:
         data = {}
         if self.bme:
             t, p, h = self.bme.read_compensated_data()
+
+            p0 = ((p / 100) * pow(1 - (0.0065 * self.altitude / (t + 0.0065 * self.altitude + 273.15)), -5.257))
+
             data["temperature"] = t
             data["humidity"] = h
-            data["pressure"] = p
+            data["pressure_raw"] = p / 100
+            data["pressure"] = p0
         return data

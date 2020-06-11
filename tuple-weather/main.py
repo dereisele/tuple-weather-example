@@ -8,13 +8,13 @@ if machine.reset_cause() == machine.DEEPSLEEP_RESET:
 rtc = machine.RTC()
 rtc.irq(trigger=rtc.ALARM0, wake=machine.DEEPSLEEP)
 
-w = WeatherStation()
+w = WeatherStation(600)
 
 data = w.read_data()
 
 text = "Temperature: " + str(data.get('temperature')) + "°C\n" \
     + "Humidity: " + str(data.get('humidity')) + "%\n" \
-    + "Pressure: " + str(data.get('pressure')/100) + "hPa"
+    + "Pressure: " + str(data.get('pressure')) + "hPa"
 print(text)
 
 t = Tuple("192.168.178.100", "!ggpDjdETiNCJTpSGto:eiselecloud.de")
