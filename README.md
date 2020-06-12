@@ -56,7 +56,7 @@ and a BME280 to measure
 
 * Setup Tuple using it's [README](https://github.com/derEisele/tuple/blob/master/README.md)
 * Flash the ESP8266 with Micropython [Tutorial](https://docs.micropython.org/en/latest/esp8266/tutorial/intro.html)
-* Attach the BME280 via I2C (SCL=5, SDA=6)
+* Attach the BME280 via I2C (SCL=5 aka D1, SDA=4 aka D2) and power (VIN=5v, GND=G)
 
 ## Shopping List for a Weather Station
 
