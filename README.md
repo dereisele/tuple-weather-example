@@ -5,6 +5,11 @@ A example project to send weather data from a ESP8266 to a [Matrix](matrix.org)
 room using MQTT and [Tuple](https://github.com/derEisele/tuple).
 
 It's using a ESP8266 flashed with [MicroPython](https://micropython.org/)
+and a BME280 to measure
+
+* Barometric Pressure
+* Temperature
+* Humidity
 
 ## Message Flow
 ```text
