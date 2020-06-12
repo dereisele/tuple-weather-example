@@ -4,7 +4,7 @@ Tuple ESP8266 Weather Station Example
 A example project to send weather data from a ESP8266 to a [Matrix](matrix.org)
 room using MQTT and [Tuple](https://github.com/derEisele/tuple).
 
-It's using a ESP8266 flashed with [MicroPython]()
+It's using a ESP8266 flashed with [MicroPython](https://micropython.org/)
 
 ## Message Flow
 ```text
