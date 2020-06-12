@@ -8,7 +8,7 @@ if machine.reset_cause() == machine.DEEPSLEEP_RESET:
 rtc = machine.RTC()
 rtc.irq(trigger=rtc.ALARM0, wake=machine.DEEPSLEEP)
 
-w = WeatherStation(600)
+w = WeatherStation(600)  # The altitude of the weather station
 
 data = w.read_data()
 
@@ -17,7 +17,7 @@ text = "Temperature: " + str(data.get('temperature')) + "°C\n" \
     + "Pressure: " + str(data.get('pressure')) + "hPa"
 print(text)
 
-t = Tuple("192.168.178.100", "!ggpDjdETiNCJTpSGto:eiselecloud.de")
+t = Tuple("192.168.178.100", "!ggpDjdETiNCJTpSGto:eiselecloud.de")  # The MQTT Broker's IP and a Matrix room ID
 
 t.send(data, text)
 
