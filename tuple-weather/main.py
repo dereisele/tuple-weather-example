@@ -24,7 +24,7 @@ t.send(data, text)
 print("send data")
 t.done()
 
-rtc.alarm(rtc.ALARM0, 600000 * 15)  # 15 minutes
+rtc.alarm(rtc.ALARM0, 60000 * 15)  # 15 minutes
 
 print("goodbye")
 
